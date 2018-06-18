@@ -1,0 +1,9 @@
+{
+  "name": "bootstrap-scrollTo",
+  "version": "0.1.0",
+  "description": "An animated Bootstrap scroll to anchor plugin.",
+  "main": "dist/bootstrap-scrollTo.js",
+  "repository": "https://github.com/leifdejong/bootstrap-scrollTo.git",
+  "author": "Leif DeJong <me@leifdejong.com>",
+  "license": "MIT"
+}
