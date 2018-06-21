@@ -64,6 +64,19 @@ module.exports = {
         ],
       },
 
+      // markdown
+      {
+        test: /\.md$/,
+        use: [
+          {
+            loader: 'html-loader',
+          },
+          {
+            loader: 'markdown-loader',
+          },
+        ],
+      },
+
       // images
       {
         test: /\.(gif|png|jpe?g|svg)$/i,
