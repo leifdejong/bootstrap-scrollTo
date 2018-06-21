@@ -11,4 +11,4 @@ node_modules/
 .yarn-integrity
 
 # Folders
-dist
+docs/

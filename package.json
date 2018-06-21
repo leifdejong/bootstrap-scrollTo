@@ -8,8 +8,9 @@
   "main": "./src/scripts/index.js",
   "scripts": {
     "build": "webpack --config webpack.prod.js",
+    "build:docs": "webpack --config webpack.docs.js",
     "precommit": "lint-staged",
-    "deploy": "npm run build && gh-pages -d dist",
+    "deploy": "npm run build:docs && gh-pages -d docs",
     "format": "npm run format:package && npm run format:scripts && npm run format:styles",
     "format:package": "prettier-package-json --write",
     "format:scripts": "prettier-eslint --write ./webpack.*.js ./src/scripts/**/*.js",

@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const PATHS = {
   src: path.resolve(__dirname, 'src'),
-  dist: path.resolve(__dirname, 'dist'),
+  dist: path.resolve(__dirname, 'docs'),
 };
 
 module.exports = {
@@ -16,11 +16,14 @@ module.exports = {
     open: true,
   },
 
-  entry: `${PATHS.src}/scripts/index.js`,
+  entry: {
+    app: `${PATHS.src}/scripts/index.js`,
+    docs: `${PATHS.src}/scripts/docs.js`,
+  },
 
   output: {
     path: PATHS.dist,
-    filename: `${pkg.name}.js`,
+    filename: `[name].js`,
   },
 
   module: {
