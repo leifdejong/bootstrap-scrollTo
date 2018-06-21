@@ -14,8 +14,8 @@ const PATHS = {
 
 // add entries here
 const ENTRIES = {};
-ENTRIES[pkg.name] = `${PATHS.src}/scripts/index.js`;
-ENTRIES['docs'] = `${PATHS.src}/scripts/docs.js`;
+ENTRIES[pkg.name] = `${PATHS.src}/index.js`;
+ENTRIES['docs'] = `${PATHS.src}/docs/scripts/index.js`;
 
 module.exports = {
   mode: 'production',
@@ -101,7 +101,7 @@ module.exports = {
     // templates
     new HtmlWebpackPlugin({
       filename: 'index.html',
-      template: './src/templates/index.ejs',
+      template: './src/docs/templates/index.ejs',
       title: pkg.name,
       description: pkg.description,
       version: pkg.version,

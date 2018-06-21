@@ -11,7 +11,7 @@ const PATHS = {
 
 // add entries here
 const ENTRIES = {};
-ENTRIES[pkg.name] = `${PATHS.src}/scripts/index.js`;
+ENTRIES[pkg.name] = `${PATHS.src}/index.js`;
 
 module.exports = {
   mode: 'production',

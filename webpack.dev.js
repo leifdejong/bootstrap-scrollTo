@@ -8,6 +8,11 @@ const PATHS = {
   dist: path.resolve(__dirname, 'docs'),
 };
 
+// add entries here
+const ENTRIES = {};
+ENTRIES[pkg.name] = `${PATHS.src}/index.js`;
+ENTRIES['docs'] = `${PATHS.src}/docs/scripts/index.js`;
+
 module.exports = {
   mode: 'development',
   devtool: 'inline-source-map',
@@ -16,10 +21,7 @@ module.exports = {
     open: true,
   },
 
-  entry: {
-    app: `${PATHS.src}/scripts/index.js`,
-    docs: `${PATHS.src}/scripts/docs.js`,
-  },
+  entry: ENTRIES,
 
   output: {
     path: PATHS.dist,
@@ -96,7 +98,7 @@ module.exports = {
     // templates
     new HtmlWebpackPlugin({
       filename: 'index.html',
-      template: './src/templates/index.ejs',
+      template: './src/docs/templates/index.ejs',
       inject: true,
       title: pkg.name,
       description: pkg.description,
